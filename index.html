@@ -1,208 +1,210 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">-->
+    <meta name="viewport" content="viewport-fit=cover, user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <title>Ellanse Experts Guide Chapter 2</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css"><link rel="stylesheet" href="src/video.popup.css">
-      <link rel="stylesheet" href="src/video.popup.css">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-      <script type="text/javascript">
-      </script>
-      <style>
-          /* Safari fix */
-          input {
-              /* Chrome, Opera, Safari */
-              -webkit-user-select: text;
-              /* Firefox 2+ */
-              -moz-user-select: text;
-              /* IE 10+ */
-              -ms-user-select: text;
-              /* Standard syntax */
-              user-select: text;
-          }
-          div#loadingBox {
-              width: 100%;
-              height: 0px;
-              position: absolute;
-              bottom: 50px;
-              margin-top: 137px;
-              text-align: center;
-          }
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="stylesheet" href="src/video.popup.css">
+    <link rel="stylesheet" href="src/video.popup.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script type="text/javascript">
+    </script>
+    <style>
+        /* Safari fix */
+        input {
+            /* Chrome, Opera, Safari */
+            -webkit-user-select: text;
+            /* Firefox 2+ */
+            -moz-user-select: text;
+            /* IE 10+ */
+            -ms-user-select: text;
+            /* Standard syntax */
+            user-select: text;
+        }
 
-          div#bgBar {
-              display: none;
-              position: absolute;
-              width: 420px;
-              margin-left: -210px;
-              left: 50%;
-              height: 25px;
-              background-color: #000000;
-              box-shadow: 1px 1px 5px #111;
-          }
+        div#loadingBox {
+            width: 100%;
+            height: 0px;
+            position: absolute;
+            bottom: 50px;
+            margin-top: 137px;
+            text-align: center;
+        }
 
-          div#progressBar {
-              display: none;
-              left: 50%;
-              position: absolute;
-              margin-left: -210px;
-              width: 0px;
-              height: 25px;
-              background-color: #FFC300;
-          }
+        div#bgBar {
+            display: none;
+            position: absolute;
+            width: 420px;
+            margin-left: -210px;
+            left: 50%;
+            height: 25px;
+            background-color: #000000;
+            box-shadow: 1px 1px 5px #111;
+        }
 
-          p#loadingInfo {
-              color: white;
-              letter-spacing: 1px;
-              position: absolute;
-              width: 100%;
-              font-family: 'futura';
-              text-align: center;
-              bottom: 50px;
-              font-size: 20px;
-              font-weight: 500;
-              margin-top: 80px;
-          }
-          
+        div#progressBar {
+            display: none;
+            left: 50%;
+            position: absolute;
+            margin-left: -210px;
+            width: 0px;
+            height: 25px;
+            background-color: #FFC300;
+        }
 
-          #gameContainer canvas {
-              display: block;
-          }
+        p#loadingInfo {
+            color: white;
+            letter-spacing: 1px;
+            position: absolute;
+            width: 100%;
+            font-family: 'futura';
+            text-align: center;
+            bottom: 50px;
+            font-size: 20px;
+            font-weight: 500;
+            margin-top: 80px;
+        }
 
-          @keyframes loading {
-              from {
-                  top: -185%
-              }
 
-              to {
-                  top: 225%
-              }
-          }
-          
-          @font-face
-          {
+        #gameContainer canvas {
+            display: block;
+        }
+
+        @keyframes loading {
+            from {
+                top: -185%
+            }
+
+            to {
+                top: 225%
+            }
+        }
+
+        @font-face {
             src: url("TemplateData/Futura-BT-Bold.ttf");
             font-family: futura;
-          }
+        }
 
-          body,
-          html {
-              font-size: 0.9em;
-              height: 100%;
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: cover;
-          }
+        body,
+        html {
+            font-size: 0.9em;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
-          @media all and (max-width: 1200px) {
+        @media all and (max-width: 1200px) {
 
-              /* screen size until 1200px */
-              body {
-                  font-size: 1.5em;
-                  /* 1.5x default size */
-              }
-          }
-
-          @media all and (max-width: 1000px) {
-
-              /* screen size until 1000px */
-              body {
-                  font-size: 1.2em;
-                  /* 1.2x default size */
-              }
-          }
-
-          @media all and (max-width: 500px) {
-
-              /* screen size until 500px */
-              body {
-                  font-size: 0.8em;
-                  /* 0.8x default size */
-              }
-
-              h2 {
-                  font-size: 1.2rem;
-                  margin-bottom: 20px !important;
-              }
-
-              h6 {
-                  font-size: .8rem;
-              }
-
-              small {
-                  font-size: 90%;
-              }
-          }
-      </style>
-      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-      <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css" integrity="sha512-gxWow8Mo6q6pLa1XH/CcH8JyiSDEtiwJV78E+D+QP0EVasFs8wKXq16G8CLD4CJ2SnonHr4Lm/yY2fSI2+cbmw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-      <script>
-
-          var touch0X;
-          var touch0Y;
-          var touch1X;
-          var touch1Y;
-
-          document.addEventListener('touchmove', function(evt) 
-          {
-            if (evt.touches.length >= 2) 
-            {
-            touch0X = evt.touches[0].clientX;
-            touch0Y = evt.touches[0].clientY;
-            
-            touch1X = evt.touches[1].clientX;
-            touch1Y = evt.touches[1].clientY;
+            /* screen size until 1200px */
+            body {
+                font-size: 1.5em;
+                /* 1.5x default size */
             }
-          }, false);
+        }
 
-          function GetTouchPosition0X() {
-              console.log(touch0X);
-              if (touch0X !== undefined) {
-                  return touch0X.toString();
-              }
-              else {
-                  return "";
-              }
-          }
+        @media all and (max-width: 1000px) {
 
-          function GetTouchPosition0Y() {
-              console.log(touch0Y);
-              if (touch0Y !== undefined) {
-                  return touch0Y.toString();
-              }
-              else {
-                  return "";
-              }
-          }
+            /* screen size until 1000px */
+            body {
+                font-size: 1.2em;
+                /* 1.2x default size */
+            }
+        }
 
-          function GetTouchPosition1X() {
-              console.log(touch1X);
-              if (touch1X !== undefined) {
-                  return touch1X.toString();
-              }
-              else {
-                  return "";
-              }
-          }
+        @media all and (max-width: 500px) {
 
-          function GetTouchPosition1Y() {
-              console.log(touch1Y);
-              if (touch1Y !== undefined) {
-                  return touch1Y.toString();
-              }
-              else {
-                  return "";
-              }
-          }
+            /* screen size until 500px */
+            body {
+                font-size: 0.8em;
+                /* 0.8x default size */
+            }
 
-      </script>
+            h2 {
+                font-size: 1.2rem;
+                margin-bottom: 20px !important;
+            }
 
-  </head>
+            h6 {
+                font-size: .8rem;
+            }
+
+            small {
+                font-size: 90%;
+            }
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css" integrity="sha512-gxWow8Mo6q6pLa1XH/CcH8JyiSDEtiwJV78E+D+QP0EVasFs8wKXq16G8CLD4CJ2SnonHr4Lm/yY2fSI2+cbmw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script>
+
+        var touch0X;
+        var touch0Y;
+        var touch1X;
+        var touch1Y;
+
+        document.addEventListener('touchmove', function (evt) {
+            if (evt.touches.length >= 2) {
+                touch0X = evt.touches[0].clientX;
+                touch0Y = evt.touches[0].clientY;
+
+                touch1X = evt.touches[1].clientX;
+                touch1Y = evt.touches[1].clientY;
+            }
+        }, false);
+
+        function GetTouchPosition0X() {
+            console.log(touch0X);
+            if (touch0X !== undefined) {
+                return touch0X.toString();
+            }
+            else {
+                return "";
+            }
+        }
+
+        function GetTouchPosition0Y() {
+            console.log(touch0Y);
+            if (touch0Y !== undefined) {
+                return touch0Y.toString();
+            }
+            else {
+                return "";
+            }
+        }
+
+        function GetTouchPosition1X() {
+            console.log(touch1X);
+            if (touch1X !== undefined) {
+                return touch1X.toString();
+            }
+            else {
+                return "";
+            }
+        }
+
+        function GetTouchPosition1Y() {
+            console.log(touch1Y);
+            if (touch1Y !== undefined) {
+                return touch1Y.toString();
+            }
+            else {
+                return "";
+            }
+        }
+
+    </script>
+
+</head>
 
   <body>
   <a id="video" style="display: none;" data-fancybox href="https://vimeo.com/191947042?color=f00"> Vimeo video -
@@ -244,11 +246,11 @@
   
     <script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/v0.0.1 (33).loader.js";
+      var loaderUrl = buildUrl + "/v0.0.1 (49).loader.js";
       var config = {
-        dataUrl: buildUrl + "/v0.0.1 (33).data",
-        frameworkUrl: buildUrl + "/v0.0.1 (33).framework.js",
-        codeUrl: buildUrl + "/v0.0.1 (33).wasm",
+        dataUrl: buildUrl + "/v0.0.1 (49).data",
+        frameworkUrl: buildUrl + "/v0.0.1 (49).framework.js",
+        codeUrl: buildUrl + "/v0.0.1 (49).wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "BidOnGames",
         productName: "Ellanse Experts Guide Chapter 2",
